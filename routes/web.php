@@ -33,3 +33,13 @@ Route::get('/category/{id}', function ($idaaa) {
 
 Route::get("/products", "ProductController@index");
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/dressorder', 'DressController@index');
+
+Route::post('/order', 'OrderController@dress')->name("order.dress");
+
+Route::get('/dressorders', 'DressController@dressOrders');
